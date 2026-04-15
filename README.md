@@ -64,12 +64,12 @@ El objetivo es identificar insights clave relacionados con ventas, rentabilidad,
 ---
 ## 📂 Estructura del proyecto
 
+```bash
 superstore-korea-analysis/
 │
 ├── data/
-│   └── KR_Superstore_sample_2025.csv
-|   └── KR_superstore_clean.csv
-|
+│   ├── KR_Superstore_sample_2025.csv
+│   └── KR_superstore_clean.csv
 │
 ├── notebooks/
 │   └── analysis.ipynb
@@ -77,6 +77,7 @@ superstore-korea-analysis/
 ├── images/
 │
 └── README.md
+
 
 ---
 
