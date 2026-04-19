@@ -100,9 +100,6 @@ El dashboard permite explorar de forma interactiva:
 
 ---
 
-## 📁 Estructura del proyecto
-
----
 ## 📂 Estructura del proyecto
 
 ```bash
