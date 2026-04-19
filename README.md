@@ -1,65 +1,106 @@
-# 💳🏬 Superstore Korea 2025 - Análisis de Ventas y Tendencias
+# 💳🏬 Superstore Korea 2025 - Análisis de Ventas y Rentabilidad
 
 ## 📌 Descripción del proyecto
+Este proyecto tiene como objetivo analizar el comportamiento de ventas, rentabilidad y devoluciones en un dataset de retail en Corea del Sur.
 
-Este proyecto analiza un dataset de una tienda retail en Corea del Sur.
-El objetivo es identificar insights clave relacionados con ventas, rentabilidad, descuentos y devoluciones para apoyar la toma de decisiones de negocio.
+Se exploran patrones clave del negocio como:
+- Categorías más rentables
+- Impacto de los descuentos en la rentabilidad
+- Regiones con mayor desempeño
+- Tendencias de ventas en el tiempo
+- Tasa de devoluciones
 
----
-
-## 🎯 Objetivos
-
-- Analizar la distribución de ventas por categoría y región
-- Identificar las categorías más rentables
-- Evaluar el impacto de los descuentos en la rentabilidad
-- Analizar la tasa de devoluciones
+El análisis se realizó utilizando Python (Pandas, Matplotlib) y se desarrolló un dashboard interactivo en Power BI.
 
 ---
 
-## 🛠 Herramientas utilizadas
-
-- Python (Pandas) → limpieza y análisis de datos
-- Jupyter Notebook → análisis exploratorio
-- Power BI → visualización de datos (en proceso)
+## 🧰 Tecnologías utilizadas
+- Python
+- Pandas
+- Matplotlib / Seaborn
+- Power BI
+- Jupyter Notebook
 
 ---
 
-## 🧹 Limpieza de datos
+## 🧼 Limpieza de datos
+Se realizaron las siguientes transformaciones:
 
-- Traducción de columnas del coreano a inglés
-- Estandarización de variables categóricas (segmento, categoría, envíos)
+- Renombrado de columnas (coreano → inglés)
+- Traducción de variables categóricas
 - Conversión de fechas a formato datetime
-- Limpieza de valores booleanos en la columna "returned"
-- Validación de calidad de datos (sin valores nulos y tipos correctos)
+- Limpieza de la columna `returned`
+- Validación de valores nulos y duplicados
+
+Los datos finales están listos para análisis y visualización.
 
 ---
 
-## 📊 Insights clave
+## 📊 Análisis exploratorio
 
-- Office Supplies es la categoría con mayor volumen de ventas, lo que indica alta demanda, pero no necesariamente alta rentabilidad.
-- Technology es la categoría más rentable, lo que sugiere mejores márgenes de ganancia.
-- Los descuentos mayores al 25% generan pérdidas significativas.
-- La tasa de devoluciones es de aproximadamente 7.13%, considerada moderada pero con impacto en la rentabilidad.
-- Las ventas se concentran en regiones clave como Seúl (서울특별시) y Gyeonggi (경기도).
-- Existe estacionalidad en las ventas, con picos en junio, agosto, octubre y noviembre.
+### 💰 Ventas por categoría
+Se identificó que **Office Supplies** es la categoría con mayor volumen de ventas.
+
+### 📈 Rentabilidad por categoría
+La categoría más rentable es **Technology**, indicando mejores márgenes de ganancia.
+
+### ⚠️ Impacto del descuento
+Existe una relación negativa entre descuento y rentabilidad:
+
+- A partir de ~27% de descuento, los productos comienzan a generar pérdidas
+- Descuentos altos afectan directamente la utilidad del negocio
+
+### 🌍 Ventas por región
+Las regiones con mayor volumen de ventas son:
+- 서울특별시 (Seúl)
+- 경기도 (Gyeonggi)
+
+Estas representan los principales mercados del negocio.
+
+### 📅 Tendencia de ventas
+- Crecimiento sostenido entre 2023 y 2025
+- Picos de ventas en junio, agosto, octubre y noviembre
+- Máximo histórico en noviembre 2025
+
+### 🔄 Tasa de devoluciones
+La tasa de devoluciones es aproximadamente **7.14%**, lo cual es un nivel moderado pero con impacto en la rentabilidad.
 
 ---
 
 ## 🧠 Conclusiones
-
-- Un alto volumen de ventas no garantiza rentabilidad
-- La estrategia de descuentos impacta directamente en las ganancias
-- El negocio depende de ciertas regiones clave
-- Las devoluciones y descuentos combinados afectan negativamente el margen
+- Office Supplies lidera en ventas, pero no en rentabilidad
+- Technology es la categoría más rentable
+- Descuentos altos generan pérdidas significativas
+- Existen regiones clave que concentran la mayor parte de las ventas
+- Las devoluciones afectan la utilidad del negocio
 
 ---
 
 ## 💡 Recomendaciones
+- Revisar la estrategia de descuentos (especialmente >20%)
+- Potenciar productos de la categoría Technology
+- Optimizar operaciones en Furniture
+- Expandir presencia en regiones con menor participación
+- Analizar causas de devoluciones
 
-- Reducir descuentos agresivos (>25%)
-- Priorizar la categoría Technology por su alta rentabilidad
-- Analizar productos con alta tasa de devolución
-- Expandir la presencia en regiones con menor participación
+---
+
+## 📊 Dashboard (Power BI)
+El dashboard permite explorar de forma interactiva:
+
+- Cards principales (ventas, profit, margen, devoluciones)
+- Impacto del descuento en la rentabilidad
+- Ventas por categoría y región
+- Tendencias mensuales
+- Top productos más rentables
+
+![Dashboard Superstore Korea](images/dashboard.png)
+
+📌 *El archivo .pbix se encuentra en este repositorio.*
+
+---
+
+## 📁 Estructura del proyecto
 
 ---
 ## 📂 Estructura del proyecto
@@ -71,14 +112,17 @@ superstore-korea-analysis/
 │   ├── KR_Superstore_sample_2025.csv
 │   └── KR_superstore_clean.csv
 │
-├── notebooks/
-│   └── analysis.ipynb
-│
 ├── images/
+│   └── dashboard.png
 │
+├── notebook/
+│   └── analysis.ipynb
+│   
+├── powerbi/
+│   └── superstore_korea_sales_dashboard.pbix
 └── README.md
 
-
+```
 ---
 
 ## 🐍 Proyecto en Python
